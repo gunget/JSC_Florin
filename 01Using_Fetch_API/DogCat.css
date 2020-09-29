@@ -1,0 +1,74 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    background-image: linear-gradient(180deg, rgba(247,247,247,1) 23.8%, rgba(252,221,221,1) 92%);
+    /* 그라이언트방향 180도, 1번색, 2번색 */
+    font-family: 'Open Sans' + sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* 정하지 않으면 기본은 row */
+    justify-content: center;
+    /* 기준축의 정렬 */
+    align-items: center;
+    /* 수직축의 정렬 */
+    height: 100vh;
+    margin: 0;
+}
+
+.results {
+    display: flex;
+    justify-content: center;   
+}
+
+.result {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 3px gray;
+}
+
+.result img {
+    object-fit: cover;
+    /* cover : 이미지의 ratio는 지키면서 컨테이너를 넘어서는 부분은 삭제. 왜곡되지 않음 */
+    /* default는 fill(욱여넣기). contain(비율지키며 욱여넣기) = scale-down*/
+    height: 100%;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: darksalmon;
+    border: 0px;
+    border-radius: 4px;
+    box-shadow: 3px 5px 3px gray;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.btn:active {
+    /* active:click으로 선택했을 때 적용됨 */
+    /* a태그에 적용했을 시 :link는 방문하지 않은상태,
+    :visited은 방문하고 나서상태, :hover는 마우스 올렸을 때,
+    :active는 클릭했을 때*/
+    transform: scale(0.9);
+}
+
+.btn:focus {
+    /* 인풋창 같이 사용자의 프롬프터가 넘어왔을 때 어떤 상태를 줄것이냐 */
+    outline: none;
+    /* DEFAULT로 적용되는 검은색 boarder를 없애기 */
+}
+

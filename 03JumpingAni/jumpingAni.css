@@ -1,0 +1,45 @@
+body {
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.loading{
+    display: flex;
+
+}
+
+.circle {
+    background-color: honeydew;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin: 3px;
+    animation: jump 0.5s ease-in infinite;
+    /* animation은 사용자정의 이름을 만들고 각 단계별 속성변화는 @keyframe으로 설정한다.
+    나머시 지속시간 인아웃방법 반복여부는 에니메이션 설정으로 정의한다. */
+    
+}
+
+.circle:nth-of-type(2) { 
+    /* 같은 종류의 자식요소가 있을 때 특정 요소를 선택하는 방법. 1부터 시작 */
+    /* 종류와 상관없이 하려면 nth-child(순번)를 사용 */
+    animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+@keyframes jump {
+    /* 유저가 정의한 에니메이션의 단계별 변화를 정의 */
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+        background-color: red;
+    }
+}

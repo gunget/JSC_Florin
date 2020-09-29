@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./LogVaild.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <!-- font awesome에서 폰트 받아서 쓰는 용도 -->
+    <script defer src="./LogVaild.js"></script>
+    <title>LogInValidation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Create Account</h2>
+      </div>
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="userName">User Name</label>
+          <input type="text" placeholder="ID를 입력하세요" id="userName" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="email">Email Address</label>
+          <input type="email" placeholder="이메일을 입력하세요." id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="pwd1">Password</label>
+          <input type="password" placeholder="암호를 입력하세요" id="pwd1" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="pwd2">Password Confirm</label>
+          <input
+            type="password"
+            placeholder="암호를 다시 입력하세요"
+            id="pwd2"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+
+</html>

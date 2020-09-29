@@ -1,0 +1,136 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #9b59b6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+    /* padding: 20px; */
+    overflow: hidden;
+    /* contanier 밖으로 나가는 것들은 없앤다 */
+    width: 400px;
+    /* %일때는 전체 화면크기에 비례해 창의 폭의 변한다 */
+    max-width: 100%;
+    /* 기본값은 400px. 줄이면 화면비율의 100%까지 줄어든다*/
+    /* max는 줄었을때 최대값, min은 커졌을때 최소값 */
+    /* width가 고정값이고 max min이 가변값일때
+    width고정+max가변 : pc고정, 모바일 화면크기 대비 max값까지 줄어든다 
+    width고정+min가변 : 모바일고정, pc 화면크기 대비 min값까지 확대된다 
+    width고정+man가변+min가변 : 고정무시, 화면크기 대비 min값까지 확대 max까지 축소된다 */
+}
+
+.header {
+    border-bottom: 2px solid #f0f0f0;
+    background-color: #f7f7f7;
+    padding: 20px 40px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    /* inline은 한줄에 그대로 표시
+    inline-block은 한줄에 표시되는데 블록처럼 폭 높이를 지정가능
+    block은 새로운줄에 표시, 폭, 높이 지정가능 */
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    display: block;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    background-color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form button:active {
+    transform: scale(0.95);
+}
+
+.form button:focus {
+    outline: none;
+}
+

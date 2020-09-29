@@ -1,0 +1,125 @@
+@import url('http://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.netflix_logo {
+    max-width: 150px;
+}
+
+.netflix_text {
+    text-transform: uppercase;
+}
+
+.netflix_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    /* 여기서의 translateX는 보이다가 사라질때의 효과. visible이란 클래스네임을 
+    없애려다 보이까 여기다 넣어야 함 */
+    transition: transform 0.3s ease-in-out;
+    /* 현재 nav객체를 얼마나 이동할거냐. -100%하면 왼쪽으로 이동해서 사라짐 */
+}
+
+.netflix_nav.visible {
+    transform: translateX(0%);
+    /* visible이 될때의 효과 */ 
+}
+
+.netflix_nav_black {
+    background-color: black;
+    max-width: 480px;
+    min-width: 320px;
+    width: 60%;
+    /* 전체 화면폭의 60%를 차지하되 최대는 480px을 넘지 말아라 */
+    transition-delay: 0.2s;
+    /* 보이는 상태에서 보이지 않는 상태가 될때의 딜레이 */
+}
+
+.netflix_nav_black.visible {
+    transition-delay: 0s;
+    /* visible이 될때의 딜레이 */
+}
+
+.netflix_nav_red {
+    background-color: red;
+    width: 95%;
+    /* 부모 엘러먼트 너비의 95% */
+    transition-delay: 0.1s;
+    /* 보이는 상태에서 보이지 않는 상태가 될때의 딜레이 */
+}
+
+.netflix_nav_red.visible {
+    transition-delay: 0.1s;
+    /* 보이는 상태에서 보이지 않는 상태가 될때의 딜레이 */
+}
+
+.netflix_nav_white {
+    background-color: white;
+    padding: 40px;
+    width: 95%;
+    /* 부모 엘러먼트 너비의 95% */
+    transition-delay: 0s;
+    /* 보이는 상태에서 보이지 않는 상태가 될때의 딜레이 */
+}
+
+.netflix_nav_white.visible {
+    transition-delay: 0.2s;
+    /* visible이 될때의 딜레이 */
+}
+.netflix_nav_btn {
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
+}
+.netflix_nav_btn.open {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+.netflix_nav_btn.close {
+    opacity: 0.5;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+}
+
+.netflix_list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.netflix_list li {
+    margin: 20px 0;
+}
+
+.netflix_list li a {
+    color: rgb(5, 39, 5);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.netflix_list ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+
+
+
+ 
