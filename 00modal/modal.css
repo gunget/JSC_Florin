@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* css를 불러쓰는 방법
+1. html 헤드태그에 <link rel='stylesheet' type='text/css' href='~~'/>를 넣기
+2. html 헤드태그에 
+   <style type='text/css'>
+        @import url('~~);
+   <style>를 넣기
+3. css파일에 직접 @import로 넣기(제일 처음에 써야된다고 함). 여기는 3번 방법을 쓴 것
+3번이 꾸밈데이터를 분리한다는 면에서는 좋으나 속도가 느리니 왠만하면 1번 쓰라고 함
+   */
+
+* { 
+    /* asterisk : 모든 엘러먼트에 다음의 효과를 먹이겠다 */
+    box-sizing: border-box;
+    /* box의 크기는 width와 heigt에 국한된다. 추가로 padding먹여도 넘어가면 적용안된다. */
+}
+
+body {
+    background-color: #edeef6;
+    font-family: 'Poppins', sans-serif; 
+    /* 구글에서 제공하는 폰트 사용. 없을 땐 다음의 고딕계열 사용 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    /* body가 보이는 크기를 보이는 크기를 다 사용하도록 100vh사용 */
+}
+
+button {
+    background-color: darkolivegreen;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    /* box-shadow : 수평offset 수직offset blur정도 색(rgba에서 a를 조정하면 투명도도 바뀜) */
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 25px;
+}
+
+.modal_container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* modal container로 앞화면 전체를 가려버리기 위해 투명도를 0%로 설정 */
+    pointer-events: none;
+    /* 투명도는 0이지만 가리고 있기에 뒷화면의 클릭이 불가능. 이것을 none으로 해주면 포인터의 이벤트에 반응하지 않음.
+    곧 뒷화면의 포인터 이벤트를 쓸 수 있음 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.modal_container.show {
+    /* show라는 클래스네임이 들어오면 덮어서 적용시킬 css. 곧 모달하면이 보여지고 동작하게 됨 */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+    /* max width는 화면이 줄어들어도 내용이 다 표시되도록 자동으로 찌그러짐*/
+}
+
+.modal h1 {
+    margin: 0;
+}
+
+.modal p {
+    opacity: 0.7;
+    font-size: 14px;
+}
