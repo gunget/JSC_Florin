@@ -18,7 +18,7 @@ textArea.addEventListener("keyup", (e) => {
 
 agnBtn.addEventListener("click", () => {
   if (tagsEl.hasChildNodes()) {
-    const childs = tagsEl.childNodes;
+    const childs = tagsEl.childNodes; //자식요소들만의 배열을 따로 만들기
     childs.forEach((child) => {
       child.classList.remove("highlighted");
     });

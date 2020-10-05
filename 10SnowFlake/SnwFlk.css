@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #323975;
+  color: #fff;
+  font-family: "Muli", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.fa-snowflake {
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  /* body에 append되므로 body가 position ancestro. 거기서 -20px이면 화면위로 날아가 버린 것 */
+  animation: fall ease-out forwards;
+  /* animation forwards는 애니메이션이 끝나고 그지점에 그대로 있는 것
+  처음으로 돌아오려면 backwards */
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+  /* from=0% to=100% */
+}
+
+.countdown-container {
+  display: flex;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  /* rem=root em 최상위 폰트 크기의 1.2배*/
+}
+
+.time h1 {
+  margin: 0;
+}
+
+.time small {
+  color: #ccc;
+}
