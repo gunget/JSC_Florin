@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: "Montserrat", sans-serif;
+}
+
+.PgsContainer {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 300px;
+  /* 하위 div는 이 높이와 폭을 상속받는다. */
+}
+
+.PgsDone {
+  background: linear-gradient(to left, #f2709c, #ff9427);
+  /* gradient 방향 시작색 끝색 */
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  width: 0;
+  height: 100%;
+  /* height 100%하면 상위 div의 높이를 꽉 채움 */
+  transition: 1s ease 0.2s;
+  /* 위 예는 대상은 빠지고 기간 커브 딜레이 3가지요소만 들어간 것
+  초기값에서 js를 통해 값을 변화 시키면 자동으로 적용 됨*/
+}
