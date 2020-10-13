@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #8244ad;
+  font-family: "Roboto Mono", sans-serif;
+  color: white;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+span {
+  letter-spacing: 2px;
+}
