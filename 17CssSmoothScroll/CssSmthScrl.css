@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+nav a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 4px solid #fff;
+}
+#page-1,
+nav a:nth-child(1) {
+  background-color: #8e44ad;
+}
+#page-2,
+nav a:nth-child(2) {
+  background-color: #e74c3c;
+}
+#page-3,
+nav a:nth-child(3) {
+  background-color: #2980b9;
+}
+#page-4,
+nav a:nth-child(4) {
+  background-color: #2ecc71;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  font-size: 3em;
+  /* em은 직전 상위태그 기준 상대적 배수크기
+  rem은 html(곧 root)태그 기준 상대적 배수 크기 */
+  font-weight: 800;
+}
